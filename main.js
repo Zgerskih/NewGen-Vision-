@@ -6,12 +6,12 @@ class UserService {
         this.password = password;
     }
 
-    get username() {                     // необходимо переименовать одноимённое свойство либо метод
+    get username() {                     // необходимо переименовать одноимённое свойство либо метод название должно быть уникальным
         return UserService.username;    // get name()
                                         // return this.username;
     }
     get password() {
-        throw "you are not allowed to get password";
+        throw "you are not allowed to get password";  // set
     }
     static authenticate_user() {
         let xhr = new XMLHttpRequest();    // лучше использовать fetch и обрабатывать ошибки внутри catch возвращая false
